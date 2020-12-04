@@ -1,0 +1,497 @@
+[
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ], [
+        "Q",
+        "CLK",
+        "D",
+        "gnd",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "S",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "S",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "B",
+        "C",
+        "D",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "pins": [
+      [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ], [
+        "A",
+        "gnd",
+        "Y",
+        "vdd"
+      ]
+   ]
+  },
+  {
+   "name": [
+      "Turn_Controller",
+      "Turn_Controller"
+   ],
+   "devices": [
+       [
+         ["AOI21X1", 627],
+         ["OAI21X1", 1571],
+         ["INVX1", 461],
+         ["AND2X2", 55],
+         ["MUX2X1", 411],
+         ["DFFPOSX1", 1057],
+         ["NAND2X1", 363],
+         ["NOR2X1", 739],
+         ["AOI22X1", 33],
+         ["OAI22X1", 94],
+         ["BUFX4", 479],
+         ["INVX2", 26],
+         ["OR2X2", 7],
+         ["XNOR2X1", 9],
+         ["INVX8", 33],
+         ["NOR3X1", 14],
+         ["CLKBUF1", 103],
+         ["NAND3X1", 82],
+         ["XOR2X1", 5],
+         ["INVX4", 14],
+         ["BUFX2", 10 ]
+       ], [
+         ["AOI21X1", 627 ],
+         ["OAI21X1", 1571 ],
+         ["INVX1", 461 ],
+         ["AND2X2", 55 ],
+         ["MUX2X1", 411 ],
+         ["DFFPOSX1", 1057 ],
+         ["NAND2X1", 363 ],
+         ["NOR2X1", 739 ],
+         ["AOI22X1", 33 ],
+         ["OAI22X1", 94 ],
+         ["BUFX4", 479 ],
+         ["INVX2", 26 ],
+         ["OR2X2", 7 ],
+         ["XNOR2X1", 9 ],
+         ["INVX8", 33 ],
+         ["NOR3X1", 14 ],
+         ["CLKBUF1", 103 ],
+         ["NAND3X1", 82 ],
+         ["XOR2X1", 5 ],
+         ["INVX4", 14 ],
+         ["BUFX2", 10 ]
+       ]
+   ],
+   "nets": [
+    6217,
+    6217
+   ],
+   "badnets": [
+   ],
+   "badelements": [
+   ],
+   "pins": [
+      [
+        "ped_Hori_Interrupt",
+        "ped_Vert_Interrupt",
+        "pedestrian_Hori_Street",
+        "traffic_Street[3]",
+        "traffic_Street[2]",
+        "traffic_Street[1]",
+        "traffic_Street[0]",
+        "pedestrian_Vert_Street",
+        "north_South[0]",
+        "north_South[1]",
+        "west_East[0]",
+        "west_East[1]",
+        "address[1]",
+        "traffic_Street_1[2]",
+        "address[2]",
+        "traffic_Street_0[3]",
+        "traffic_Street_0[1]",
+        "address[0]",
+        "address[3]",
+        "clock",
+        "traffic_Street_0[2]",
+        "address[5]",
+        "read_Write",
+        "address[4]",
+        "police_Interrupt",
+        "street",
+        "traffic_Street_1[0]",
+        "traffic_Street_1[3]",
+        "address[6]",
+        "enable",
+        "traffic_Street_0[0]",
+        "traffic_Street_1[1]",
+        "vdd",
+        "gnd"
+      ], [
+        "ped_Hori_Interrupt",
+        "ped_Vert_Interrupt",
+        "pedestrian_Hori_Street",
+        "traffic_Street[3]",
+        "traffic_Street[2]",
+        "traffic_Street[1]",
+        "traffic_Street[0]",
+        "pedestrian_Vert_Street",
+        "north_South[0]",
+        "north_South[1]",
+        "west_East[0]",
+        "west_East[1]",
+        "address[1]",
+        "traffic_Street_1[2]",
+        "address[2]",
+        "traffic_Street_0[3]",
+        "traffic_Street_0[1]",
+        "address[0]",
+        "address[3]",
+        "clock",
+        "traffic_Street_0[2]",
+        "address[5]",
+        "read_Write",
+        "address[4]",
+        "police_Interrupt",
+        "street",
+        "traffic_Street_1[0]",
+        "traffic_Street_1[3]",
+        "address[6]",
+        "enable",
+        "traffic_Street_0[0]",
+        "traffic_Street_1[1]",
+        "vdd",
+        "gnd"
+      ]
+   ]
+  }
+]

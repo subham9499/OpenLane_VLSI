@@ -1,0 +1,1285 @@
+Qflow synthesis logfile created on Friday 04 December 2020 10:27:33 PM IST
+Running yosys for verilog parsing and synthesis
+yosys  -s Turn_Controller.ys
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9 (git sha1 1979e0b)
+
+
+-- Executing script file `Turn_Controller.ys' --
+
+1. Executing Liberty frontend.
+Imported 32 cell types from liberty file.
+
+2. Executing Verilog-2005 frontend: /home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v
+Parsing Verilog input from `/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v' to AST representation.
+Generating RTLIL representation for module `\Turn_Controller'.
+Successfully finished Verilog frontend.
+
+3. Executing SYNTH pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.1.1. Analyzing design hierarchy..
+Top module:  \Turn_Controller
+
+3.1.2. Analyzing design hierarchy..
+Top module:  \Turn_Controller
+Removed 0 unused modules.
+
+3.2. Executing PROC pass (convert processes to netlists).
+
+3.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 15 switch rules as full_case in process $proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16 in module Turn_Controller.
+Marked 3 switch rules as full_case in process $proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3 in module Turn_Controller.
+Removed a total of 0 dead cases.
+
+3.2.3. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:49$81'.
+  Set init value: \counter = 7'0000000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:48$80'.
+  Set init value: \ped_Vert_Interrupt_Counter = 2'00
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:47$79'.
+  Set init value: \ped_Hori_Interrupt_Counter = 2'00
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:46$78'.
+  Set init value: \pol_Vert_Interrupt_Counter = 3'000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:45$77'.
+  Set init value: \pol_Hori_Interrupt_Counter = 3'000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:44$76'.
+  Set init value: \max_Yellow_1 = 6'000100
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:43$75'.
+  Set init value: \max_Yellow_0 = 6'000100
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:42$74'.
+  Set init value: \max_Green_1 = 6'001111
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:41$73'.
+  Set init value: \max_Green_0 = 6'001111
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:40$72'.
+  Set init value: \vert_Three_Sec_Before_Red = 6'000000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:39$71'.
+  Set init value: \hori_Three_Sec_Before_Red = 6'000000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:38$70'.
+  Set init value: \max_Red_1 = 6'010011
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:37$69'.
+  Set init value: \max_Red_0 = 6'010011
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:36$68'.
+  Set init value: \clk_Counter = 6'000000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:35$67'.
+  Set init value: \turn = 1'0
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:33$66'.
+  Set init value: \traffic_Street = 4'0000
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:32$65'.
+  Set init value: \pedestrian_Vert_Street = 1'0
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:31$64'.
+  Set init value: \pedestrian_Hori_Street = 1'0
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:30$63'.
+  Set init value: \west_East = 2'00
+Found init rule in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:29$62'.
+  Set init value: \north_South = 2'00
+
+3.2.4. Executing PROC_ARST pass (detect async resets in processes).
+
+3.2.5. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:49$81'.
+     1/1: $3\counter[6:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:48$80'.
+     1/1: $2\ped_Vert_Interrupt_Counter[1:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:47$79'.
+     1/1: $2\ped_Hori_Interrupt_Counter[1:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:46$78'.
+     1/1: $2\pol_Vert_Interrupt_Counter[2:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:45$77'.
+     1/1: $2\pol_Hori_Interrupt_Counter[2:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:44$76'.
+     1/1: $3\max_Yellow_1[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:43$75'.
+     1/1: $3\max_Yellow_0[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:42$74'.
+     1/1: $1\max_Green_1[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:41$73'.
+     1/1: $1\max_Green_0[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:40$72'.
+     1/1: $1\vert_Three_Sec_Before_Red[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:39$71'.
+     1/1: $1\hori_Three_Sec_Before_Red[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:38$70'.
+     1/1: $1\max_Red_1[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:37$69'.
+     1/1: $1\max_Red_0[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:36$68'.
+     1/1: $8\clk_Counter[5:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:35$67'.
+     1/1: $2\turn[0:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:33$66'.
+     1/1: $4\traffic_Street[3:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:32$65'.
+     1/1: $3\pedestrian_Vert_Street[0:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:31$64'.
+     1/1: $3\pedestrian_Hori_Street[0:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:30$63'.
+     1/1: $1\west_East[1:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:29$62'.
+     1/1: $1\north_South[1:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+     1/38: $7\clk_Counter[5:0]
+     2/38: $6\clk_Counter[5:0]
+     3/38: $5\clk_Counter[5:0]
+     4/38: $2\pedestrian_Hori_Street[0:0]
+     5/38: $2\pedestrian_Vert_Street[0:0]
+     6/38: $4\clk_Counter[5:0]
+     7/38: $3\clk_Counter[5:0]
+     8/38: $2\clk_Counter[5:0]
+     9/38: $1\pedestrian_Hori_Street[0:0]
+    10/38: $1\pedestrian_Vert_Street[0:0]
+    11/38: $1\pol_Vert_Interrupt_Counter[2:0]
+    12/38: $1\pol_Hori_Interrupt_Counter[2:0]
+    13/38: $1\ped_Hori_Interrupt_Counter[1:0]
+    14/38: $1\ped_Vert_Interrupt_Counter[1:0]
+    15/38: $1\turn[0:0]
+    16/38: $1\clk_Counter[5:0]
+    17/38: $2\max_Yellow_1[5:0]
+    18/38: $1\max_Yellow_1[5:0]
+    19/38: $2\max_Yellow_0[5:0]
+    20/38: $1\max_Yellow_0[5:0]
+    21/38: $0\clk_Counter[5:0]
+    22/38: $0\pedestrian_Vert_Street[0:0]
+    23/38: $0\pedestrian_Hori_Street[0:0]
+    24/38: $0\ped_Vert_Interrupt_Counter[1:0]
+    25/38: $0\ped_Hori_Interrupt_Counter[1:0]
+    26/38: $0\pol_Vert_Interrupt_Counter[2:0]
+    27/38: $0\pol_Hori_Interrupt_Counter[2:0]
+    28/38: $0\turn[0:0]
+    29/38: $0\hori_Three_Sec_Before_Red[5:0]
+    30/38: $0\vert_Three_Sec_Before_Red[5:0]
+    31/38: $0\max_Red_1[5:0]
+    32/38: $0\max_Red_0[5:0]
+    33/38: $0\max_Green_1[5:0]
+    34/38: $0\max_Green_0[5:0]
+    35/38: $0\max_Yellow_1[5:0]
+    36/38: $0\max_Yellow_0[5:0]
+    37/38: $0\west_East[1:0]
+    38/38: $0\north_South[1:0]
+Creating decoders for process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+     1/13: $3\traffic_Street[3:0]
+     2/13: $2\traffic_Street[3:0]
+     3/13: $2\counter[6:0]
+     4/13: $1\counter[6:0]
+     5/13: $1\traffic_Street[3:0]
+     6/13: $0\counter[6:0]
+     7/13: $0\traffic_Street[3:0]
+     8/13: $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6
+     9/13: $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_DATA[3:0]$5
+    10/13: $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_ADDR[7:0]$4
+    11/13: $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9
+    12/13: $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_DATA[3:0]$8
+    13/13: $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_ADDR[7:0]$7
+
+3.2.6. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+3.2.7. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\Turn_Controller.\north_South' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$310' with positive edge clock.
+Creating register for signal `\Turn_Controller.\west_East' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$311' with positive edge clock.
+Creating register for signal `\Turn_Controller.\pedestrian_Hori_Street' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$312' with positive edge clock.
+Creating register for signal `\Turn_Controller.\pedestrian_Vert_Street' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$313' with positive edge clock.
+Creating register for signal `\Turn_Controller.\turn' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$314' with positive edge clock.
+Creating register for signal `\Turn_Controller.\clk_Counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$315' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Red_0' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$316' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Red_1' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$317' with positive edge clock.
+Creating register for signal `\Turn_Controller.\hori_Three_Sec_Before_Red' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$318' with positive edge clock.
+Creating register for signal `\Turn_Controller.\vert_Three_Sec_Before_Red' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$319' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Green_0' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$320' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Green_1' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$321' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Yellow_0' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$322' with positive edge clock.
+Creating register for signal `\Turn_Controller.\max_Yellow_1' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$323' with positive edge clock.
+Creating register for signal `\Turn_Controller.\pol_Hori_Interrupt_Counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$324' with positive edge clock.
+Creating register for signal `\Turn_Controller.\pol_Vert_Interrupt_Counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$325' with positive edge clock.
+Creating register for signal `\Turn_Controller.\ped_Hori_Interrupt_Counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$326' with positive edge clock.
+Creating register for signal `\Turn_Controller.\ped_Vert_Interrupt_Counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+  created $dff cell `$procdff$327' with positive edge clock.
+Creating register for signal `\Turn_Controller.\traffic_Street' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$328' with positive edge clock.
+Creating register for signal `\Turn_Controller.\counter' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$329' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_ADDR' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$330' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_DATA' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$331' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$332' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_ADDR' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$333' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_DATA' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$334' with positive edge clock.
+Creating register for signal `\Turn_Controller.$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN' using process `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+  created $dff cell `$procdff$335' with positive edge clock.
+
+3.2.8. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:49$81'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:48$80'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:47$79'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:46$78'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:45$77'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:44$76'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:43$75'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:42$74'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:41$73'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:40$72'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:39$71'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:38$70'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:37$69'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:36$68'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:35$67'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:33$66'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:32$65'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:31$64'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:30$63'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:29$62'.
+Found and cleaned up 15 empty switches in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:68$16'.
+Found and cleaned up 3 empty switches in `\Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+Removing empty process `Turn_Controller.$proc$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:52$3'.
+Cleaned up 18 empty switches.
+
+3.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~37 debug messages>
+
+3.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 11 unused cells and 157 unused wires.
+<suppressed ~12 debug messages>
+
+3.5. Executing CHECK pass (checking for obvious problems).
+checking module Turn_Controller..
+found and reported 0 problems.
+
+3.6. Executing OPT pass (performing simple optimizations).
+
+3.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$101.
+    dead port 2/2 on $mux $procmux$104.
+    dead port 2/2 on $mux $procmux$107.
+    dead port 2/2 on $mux $procmux$110.
+    dead port 2/2 on $mux $procmux$113.
+    dead port 2/2 on $mux $procmux$116.
+    dead port 2/2 on $mux $procmux$119.
+    dead port 2/2 on $mux $procmux$126.
+    dead port 1/2 on $mux $procmux$128.
+    dead port 1/2 on $mux $procmux$134.
+    dead port 1/2 on $mux $procmux$167.
+    dead port 1/2 on $mux $procmux$176.
+    dead port 2/2 on $mux $procmux$197.
+    dead port 2/2 on $mux $procmux$209.
+    dead port 2/2 on $mux $procmux$224.
+    dead port 2/2 on $mux $procmux$242.
+    dead port 1/2 on $mux $procmux$252.
+    dead port 2/2 on $mux $procmux$254.
+    dead port 2/2 on $mux $procmux$260.
+    dead port 2/2 on $mux $procmux$266.
+    dead port 2/2 on $mux $procmux$87.
+    dead port 2/2 on $mux $procmux$89.
+    dead port 2/2 on $mux $procmux$92.
+    dead port 2/2 on $mux $procmux$98.
+Removed 24 multiplexer ports.
+<suppressed ~25 debug messages>
+
+3.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+    Consolidated identical input bits for $mux cell $procmux$276:
+      Old ports: A=4'0000, B=4'1111, Y=$procmux$276_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$276_Y [0]
+      New connections: $procmux$276_Y [3:1] = { $procmux$276_Y [0] $procmux$276_Y [0] $procmux$276_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$294:
+      Old ports: A=4'0000, B=4'1111, Y=$procmux$294_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$294_Y [0]
+      New connections: $procmux$294_Y [3:1] = { $procmux$294_Y [0] $procmux$294_Y [0] $procmux$294_Y [0] }
+  Optimizing cells in module \Turn_Controller.
+    Consolidated identical input bits for $mux cell $procmux$278:
+      Old ports: A=4'0000, B=$procmux$276_Y, Y=$0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6
+      New ports: A=1'0, B=$procmux$276_Y [0], Y=$0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6 [0]
+      New connections: $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6 [3:1] = { $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6 [0] $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6 [0] $0$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_EN[3:0]$6 [0] }
+    Consolidated identical input bits for $mux cell $procmux$296:
+      Old ports: A=4'0000, B=$procmux$294_Y, Y=$0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9
+      New ports: A=1'0, B=$procmux$294_Y [0], Y=$0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9 [0]
+      New connections: $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9 [3:1] = { $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9 [0] $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9 [0] $0$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$2_EN[3:0]$9 [0] }
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 4 changes.
+
+3.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+3.6.6. Executing OPT_RMDFF pass (remove dff with constant values).
+Promoting init spec \max_Red_0 = 6'010011 to constant driver in module Turn_Controller.
+Promoting init spec \max_Red_1 = 6'010011 to constant driver in module Turn_Controller.
+Promoting init spec \hori_Three_Sec_Before_Red = 6'000000 to constant driver in module Turn_Controller.
+Promoting init spec \vert_Three_Sec_Before_Red = 6'000000 to constant driver in module Turn_Controller.
+Promoting init spec \max_Green_0 = 6'001111 to constant driver in module Turn_Controller.
+Promoting init spec \max_Green_1 = 6'001111 to constant driver in module Turn_Controller.
+Promoting init spec \max_Yellow_0 = 6'000100 to constant driver in module Turn_Controller.
+Promoting init spec \max_Yellow_1 = 6'000100 to constant driver in module Turn_Controller.
+Promoted 8 init specs to constant drivers.
+
+3.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 0 unused cells and 32 unused wires.
+<suppressed ~1 debug messages>
+
+3.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~24 debug messages>
+
+3.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 0 changes.
+
+3.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.6.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.6.16. Finished OPT passes. (There is nothing left to do.)
+
+3.7. Executing WREDUCE pass (reducing word size of cells).
+Removed top 6 bits (of 7) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:63$15 ($add).
+Removed top 29 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:75$19 ($lt).
+Removed top 29 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:69$17 ($lt).
+Removed top 28 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:71$18 ($lt).
+Removed top 28 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:77$20 ($lt).
+Removed top 2 bits (of 6) from port A of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:82$21 ($add).
+Removed top 1 bits (of 6) from port Y of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:82$21 ($add).
+Removed top 2 bits (of 6) from port A of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:83$22 ($add).
+Removed top 1 bits (of 6) from port Y of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:83$22 ($add).
+Removed top 1 bits (of 6) from port A of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:84$23 ($add).
+Removed top 1 bits (of 6) from port A of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:85$24 ($add).
+Removed top 4 bits (of 6) from port B of cell Turn_Controller.$sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:86$25 ($sub).
+Removed top 4 bits (of 6) from port B of cell Turn_Controller.$sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:87$26 ($sub).
+Removed top 5 bits (of 6) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:102$39 ($add).
+Removed top 1 bits (of 6) from port B of cell Turn_Controller.$gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:108$41 ($gt).
+Removed top 2 bits (of 3) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:112$43 ($add).
+Removed top 30 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:120$45 ($lt).
+Removed top 5 bits (of 6) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:122$48 ($add).
+Removed top 1 bits (of 2) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:123$49 ($add).
+Removed top 1 bits (of 6) from port B of cell Turn_Controller.$gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:131$51 ($gt).
+Removed top 2 bits (of 3) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:135$53 ($add).
+Removed top 30 bits (of 32) from port B of cell Turn_Controller.$lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:143$55 ($lt).
+Removed top 5 bits (of 6) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:145$58 ($add).
+Removed top 1 bits (of 2) from port B of cell Turn_Controller.$add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:146$59 ($add).
+Removed top 4 bits (of 6) from mux cell Turn_Controller.$procmux$164 ($mux).
+Removed top 4 bits (of 6) from mux cell Turn_Controller.$procmux$170 ($mux).
+Removed top 4 bits (of 6) from mux cell Turn_Controller.$procmux$173 ($mux).
+Removed top 4 bits (of 6) from mux cell Turn_Controller.$procmux$179 ($mux).
+Removed cell Turn_Controller.$procmux$288 ($mux).
+Removed cell Turn_Controller.$procmux$282 ($mux).
+Removed cell Turn_Controller.$procmux$284 ($mux).
+Removed cell Turn_Controller.$procmux$290 ($mux).
+Removed cell Turn_Controller.$procmux$300 ($mux).
+Removed cell Turn_Controller.$procmux$302 ($mux).
+Removed top 1 bits (of 8) from FF cell Turn_Controller.$procdff$330 ($dff).
+Removed top 3 bits (of 4) from FF cell Turn_Controller.$procdff$332 ($dff).
+Removed top 1 bits (of 6) from wire Turn_Controller.$0\max_Green_0[5:0].
+Removed top 1 bits (of 6) from wire Turn_Controller.$0\max_Green_1[5:0].
+Removed top 4 bits (of 6) from wire Turn_Controller.$0\max_Yellow_0[5:0].
+Removed top 4 bits (of 6) from wire Turn_Controller.$0\max_Yellow_1[5:0].
+Removed top 3 bits (of 6) from wire Turn_Controller.$0\vert_Three_Sec_Before_Red[5:0].
+Removed top 1 bits (of 8) from wire Turn_Controller.$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$1_ADDR.
+
+3.8. Executing PEEPOPT pass (run peephole optimizers).
+
+3.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+3.10. Executing TECHMAP pass (map to technology primitives).
+
+3.10.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/usr/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+3.10.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~116 debug messages>
+
+3.11. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module Turn_Controller:
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:102$39 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:112$43 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:122$48 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:123$49 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:135$53 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:145$58 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:146$59 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:63$15 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:82$21 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:83$22 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:84$23 ($add).
+  creating $macc model for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:85$24 ($add).
+  creating $macc model for $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:86$25 ($sub).
+  creating $macc model for $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:87$26 ($sub).
+  creating $alu model for $macc $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:87$26.
+  creating $alu model for $macc $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:86$25.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:85$24.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:84$23.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:83$22.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:82$21.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:63$15.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:146$59.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:145$58.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:135$53.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:123$49.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:122$48.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:112$43.
+  creating $alu model for $macc $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:102$39.
+  creating $alu model for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:108$41 ($gt): new $alu
+  creating $alu model for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:121$47 ($gt): new $alu
+  creating $alu model for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:131$51 ($gt): new $alu
+  creating $alu model for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:144$57 ($gt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:120$45 ($lt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:143$55 ($lt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:69$17 ($lt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:71$18 ($lt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:75$19 ($lt): new $alu
+  creating $alu model for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:77$20 ($lt): new $alu
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:77$20: $auto$alumacc.cc:474:replace_alu$352
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:75$19: $auto$alumacc.cc:474:replace_alu$357
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:71$18: $auto$alumacc.cc:474:replace_alu$368
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:69$17: $auto$alumacc.cc:474:replace_alu$373
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:143$55: $auto$alumacc.cc:474:replace_alu$384
+  creating $alu cell for $lt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:120$45: $auto$alumacc.cc:474:replace_alu$395
+  creating $alu cell for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:144$57: $auto$alumacc.cc:474:replace_alu$406
+  creating $alu cell for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:131$51: $auto$alumacc.cc:474:replace_alu$411
+  creating $alu cell for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:121$47: $auto$alumacc.cc:474:replace_alu$416
+  creating $alu cell for $gt$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:108$41: $auto$alumacc.cc:474:replace_alu$427
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:102$39: $auto$alumacc.cc:474:replace_alu$432
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:112$43: $auto$alumacc.cc:474:replace_alu$435
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:122$48: $auto$alumacc.cc:474:replace_alu$438
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:123$49: $auto$alumacc.cc:474:replace_alu$441
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:135$53: $auto$alumacc.cc:474:replace_alu$444
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:145$58: $auto$alumacc.cc:474:replace_alu$447
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:146$59: $auto$alumacc.cc:474:replace_alu$450
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:63$15: $auto$alumacc.cc:474:replace_alu$453
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:82$21: $auto$alumacc.cc:474:replace_alu$456
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:83$22: $auto$alumacc.cc:474:replace_alu$459
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:84$23: $auto$alumacc.cc:474:replace_alu$462
+  creating $alu cell for $add$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:85$24: $auto$alumacc.cc:474:replace_alu$465
+  creating $alu cell for $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:86$25: $auto$alumacc.cc:474:replace_alu$468
+  creating $alu cell for $sub$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:87$26: $auto$alumacc.cc:474:replace_alu$471
+  created 24 $alu and 0 $macc cells.
+
+3.12. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module Turn_Controller that may be considered for resource sharing.
+  Analyzing resource sharing options for $memrd$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:58$14 ($memrd):
+    Found 1 activation_patterns using ctrl signal { \street \enable \read_Write }.
+    No candidates found.
+  Analyzing resource sharing options for $memrd$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:56$13 ($memrd):
+    Found 1 activation_patterns using ctrl signal { \street \enable \read_Write }.
+    No candidates found.
+
+3.13. Executing OPT pass (performing simple optimizations).
+
+3.13.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~12 debug messages>
+
+3.13.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.13.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+3.13.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$360: { $auto$alumacc.cc:490:replace_alu$358 [0] $auto$alumacc.cc:490:replace_alu$358 [1] $auto$alumacc.cc:490:replace_alu$358 [2] $auto$alumacc.cc:490:replace_alu$358 [3] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$376: { $auto$alumacc.cc:490:replace_alu$374 [0] $auto$alumacc.cc:490:replace_alu$374 [1] $auto$alumacc.cc:490:replace_alu$374 [2] $auto$alumacc.cc:490:replace_alu$374 [3] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$387: { $auto$alumacc.cc:490:replace_alu$385 [0] $auto$alumacc.cc:490:replace_alu$385 [1] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$398: { $auto$alumacc.cc:490:replace_alu$396 [0] $auto$alumacc.cc:490:replace_alu$396 [1] }
+    New input vector for $reduce_and cell $auto$alumacc.cc:64:get_eq$419: { $auto$alumacc.cc:490:replace_alu$417 [0] $auto$alumacc.cc:490:replace_alu$417 [1] $auto$alumacc.cc:490:replace_alu$417 [2] $auto$alumacc.cc:490:replace_alu$417 [3] $auto$alumacc.cc:490:replace_alu$417 [4] $auto$alumacc.cc:490:replace_alu$417 [5] }
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 5 changes.
+
+3.13.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.13.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.13.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 8 unused cells and 18 unused wires.
+<suppressed ~9 debug messages>
+
+3.13.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.13.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.13.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~21 debug messages>
+
+3.13.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 0 changes.
+
+3.13.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.13.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.13.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.13.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.13.16. Finished OPT passes. (There is nothing left to do.)
+
+3.14. Executing FSM pass (extract and optimize FSM).
+
+3.14.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking Turn_Controller.north_South as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking Turn_Controller.west_East as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+
+3.14.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+3.14.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.14.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.14.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+3.14.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+3.14.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+3.14.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+3.15. Executing OPT pass (performing simple optimizations).
+
+3.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.15.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.15.5. Finished fast OPT passes.
+
+3.16. Executing MEMORY pass.
+
+3.16.1. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+Checking cell `$memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$60' in module `\Turn_Controller': merged $dff to cell.
+Checking cell `$memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$61' in module `\Turn_Controller': merged $dff to cell.
+Checking cell `$memrd$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:56$13' in module `\Turn_Controller': no (compatible) $dff found.
+Checking cell `$memrd$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:58$14' in module `\Turn_Controller': no (compatible) $dff found.
+
+3.16.2. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 7 unused cells and 7 unused wires.
+<suppressed ~8 debug messages>
+
+3.16.3. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+3.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.16.5. Executing MEMORY_COLLECT pass (generating $mem cells).
+Collecting $memrd, $memwr and $meminit for memory `\street_0' in module `\Turn_Controller':
+  $memwr$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:61$60 ($memwr)
+  $memrd$\street_0$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:56$13 ($memrd)
+Collecting $memrd, $memwr and $meminit for memory `\street_1' in module `\Turn_Controller':
+  $memwr$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:62$61 ($memwr)
+  $memrd$\street_1$/home/subham/software/vsdflow/TrafficLightController/source/Turn_Controller.v:58$14 ($memrd)
+
+3.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+3.18. Executing OPT pass (performing simple optimizations).
+
+3.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~4 debug messages>
+
+3.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+3.18.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+3.18.5. Finished fast OPT passes.
+
+3.19. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+Mapping memory cell \street_0 in module \Turn_Controller:
+  created 128 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 127 $mux cells.
+  write interface: 128 write mux blocks.
+Mapping memory cell \street_1 in module \Turn_Controller:
+  created 128 $dff cells and 0 static cells of width 4.
+  read interface: 0 $dff and 127 $mux cells.
+  write interface: 128 write mux blocks.
+
+3.20. Executing OPT pass (performing simple optimizations).
+
+3.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~14 debug messages>
+
+3.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~384 debug messages>
+Removed a total of 128 cells.
+
+3.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~274 debug messages>
+
+3.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 0 changes.
+
+3.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+3.20.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.20.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 0 unused cells and 647 unused wires.
+<suppressed ~1 debug messages>
+
+3.20.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+3.20.9. Finished OPT passes. (There is nothing left to do.)
+
+3.21. Executing TECHMAP pass (map to technology primitives).
+
+3.21.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+3.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=4\B_WIDTH=4\Y_WIDTH=4 for cells of type $alu.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=2\B_WIDTH=2\Y_WIDTH=2 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=4\B_WIDTH=4\Y_WIDTH=5 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=5\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=6\B_WIDTH=2\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=6\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=3\B_WIDTH=4\Y_WIDTH=4 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=7\Y_WIDTH=7 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=2\Y_WIDTH=2 for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=6\Y_WIDTH=6 for cells of type $alu.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=1\B_WIDTH=3\Y_WIDTH=3 for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_lcu\WIDTH=6 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=4 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=5 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=2 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=7 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=3 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~2427 debug messages>
+
+3.22. Executing OPT pass (performing simple optimizations).
+
+3.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~445 debug messages>
+
+3.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~117 debug messages>
+Removed a total of 39 cells.
+
+3.22.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 111 unused cells and 733 unused wires.
+<suppressed ~112 debug messages>
+
+3.22.5. Finished fast OPT passes.
+
+3.23. Executing ABC pass (technology mapping using ABC).
+
+3.23.1. Extracting gate netlist of module `\Turn_Controller' to `<abc-temp-dir>/input.blif'..
+Extracted 2841 gates and 3916 wires to a netlist network with 1073 inputs and 1057 outputs.
+
+3.23.1.1. Executing ABC.
+Running ABC command: berkeley-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 17 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + retime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+3.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       13
+ABC RESULTS:            ANDNOT cells:       63
+ABC RESULTS:              AOI3 cells:       13
+ABC RESULTS:               MUX cells:     2122
+ABC RESULTS:              NAND cells:       13
+ABC RESULTS:               NOR cells:       22
+ABC RESULTS:               NOT cells:       35
+ABC RESULTS:              OAI3 cells:       15
+ABC RESULTS:              OAI4 cells:        1
+ABC RESULTS:                OR cells:      314
+ABC RESULTS:             ORNOT cells:       24
+ABC RESULTS:              XNOR cells:       18
+ABC RESULTS:               XOR cells:       78
+ABC RESULTS:        internal signals:     1786
+ABC RESULTS:           input signals:     1073
+ABC RESULTS:          output signals:     1057
+Removing temp directory.
+
+3.24. Executing OPT pass (performing simple optimizations).
+
+3.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+<suppressed ~530 debug messages>
+
+3.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+3.24.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+3.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 9 unused cells and 2153 unused wires.
+<suppressed ~10 debug messages>
+
+3.24.5. Finished fast OPT passes.
+
+3.25. Executing HIERARCHY pass (managing design hierarchy).
+
+3.25.1. Analyzing design hierarchy..
+Top module:  \Turn_Controller
+
+3.25.2. Analyzing design hierarchy..
+Top module:  \Turn_Controller
+Removed 0 unused modules.
+
+3.26. Printing statistics.
+
+=== Turn_Controller ===
+
+   Number of wires:               2984
+   Number of wire bits:           3848
+   Number of public wires:         286
+   Number of public wire bits:    1128
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3777
+     $_ANDNOT_                      61
+     $_AND_                         13
+     $_AOI3_                        13
+     $_DFF_P_                     1057
+     $_MUX_                       2122
+     $_NAND_                        13
+     $_NOR_                         22
+     $_NOT_                         26
+     $_OAI3_                        15
+     $_OAI4_                         1
+     $_ORNOT_                       24
+     $_OR_                         314
+     $_XNOR_                        18
+     $_XOR_                         78
+
+3.27. Executing CHECK pass (checking for obvious problems).
+checking module Turn_Controller..
+found and reported 0 problems.
+
+4. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell DFFNEGX1 (noninv, pins=3, area=96.00) is a direct match for cell type $_DFF_N_.
+  cell DFFPOSX1 (noninv, pins=3, area=96.00) is a direct match for cell type $_DFF_P_.
+  cell DFFSR (noninv, pins=5, area=176.00) is a direct match for cell type $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPP_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFFSR_NPP_.
+  create mapping for $_DFF_PN0_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PN1_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFF_PP0_ from mapping for $_DFFSR_PPP_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFFSR_PPP_.
+  final dff cell mappings:
+    DFFNEGX1 _DFF_N_ (.CLK( C), .D( D), .Q( Q));
+    DFFPOSX1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    DFFSR _DFF_NN0_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_NN1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_NP0_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_NP1_ (.CLK(~C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( 1));
+    DFFSR _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S( R));
+    DFFSR _DFF_PP0_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( 1));
+    DFFSR _DFF_PP1_ (.CLK( C), .D( D), .Q( Q), .R( 1), .S(~R));
+    DFFSR _DFFSR_NNN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_NNP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_NPN_ (.CLK(~C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_NPP_ (.CLK(~C), .D( D), .Q( Q), .R(~R), .S(~S));
+    DFFSR _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S( S));
+    DFFSR _DFFSR_PNP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S( S));
+    DFFSR _DFFSR_PPN_ (.CLK( C), .D( D), .Q( Q), .R( R), .S(~S));
+    DFFSR _DFFSR_PPP_ (.CLK( C), .D( D), .Q( Q), .R(~R), .S(~S));
+Mapping DFF cells in module `\Turn_Controller':
+  mapped 1057 $_DFF_P_ cells to \DFFPOSX1 cells.
+
+5. Executing OPT pass (performing simple optimizations).
+
+5.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+5.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+5.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+5.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 0 changes.
+
+5.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+5.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+5.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+
+5.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+5.9. Finished OPT passes. (There is nothing left to do.)
+
+6. Executing ABC pass (technology mapping using ABC).
+
+6.1. Extracting gate netlist of module `\Turn_Controller' to `<abc-temp-dir>/input.blif'..
+Extracted 2720 gates and 3793 wires to a netlist network with 1073 inputs and 1057 outputs.
+
+6.1.1. Executing ABC.
+Running ABC command: /usr/local/share/qflow/bin/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.00 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFNEGX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFPOSX1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFSR".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "LATCH".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUFX2".
+ABC: Library "osu018_stdcells" from "/usr/local/share/qflow/tech/osu018/osu018_stdcells.lib" has 26 cells (6 skipped: 4 seq; 2 tri-state; 0 no func; 0 dont_use).  Time =     0.00 sec
+ABC: Memory =    0.36 MB. Time =     0.00 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FAX1").
+ABC: + strash 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + ifraig 
+ABC: + retime 
+ABC: + strash 
+ABC: + dch -f 
+ABC: + map -M 1 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+6.1.2. Re-integrating ABC results.
+ABC RESULTS:            AND2X2 cells:       55
+ABC RESULTS:           AOI21X1 cells:      627
+ABC RESULTS:           AOI22X1 cells:       33
+ABC RESULTS:             INVX1 cells:      534
+ABC RESULTS:            MUX2X1 cells:      411
+ABC RESULTS:           NAND2X1 cells:      363
+ABC RESULTS:           NAND3X1 cells:       82
+ABC RESULTS:            NOR2X1 cells:      739
+ABC RESULTS:            NOR3X1 cells:       14
+ABC RESULTS:           OAI21X1 cells:     1571
+ABC RESULTS:           OAI22X1 cells:       94
+ABC RESULTS:             OR2X2 cells:        7
+ABC RESULTS:           XNOR2X1 cells:        9
+ABC RESULTS:            XOR2X1 cells:        5
+ABC RESULTS:        internal signals:     1663
+ABC RESULTS:           input signals:     1073
+ABC RESULTS:          output signals:     1057
+Removing temp directory.
+
+7. Executing FLATTEN pass (flatten design).
+No more expansions possible.
+
+8. Executing SETUNDEF pass (replace undef values with defined constants).
+Removed 0 unused cells and 3801 unused wires.
+
+9. Executing IOPADMAP pass (mapping inputs/outputs to IO-PAD cells).
+Don't map input port Turn_Controller.address: Missing option -inpad.
+Don't map input port Turn_Controller.clock: Missing option -inpad.
+Don't map input port Turn_Controller.enable: Missing option -inpad.
+Mapping port Turn_Controller.north_South using BUFX2.
+Don't map input port Turn_Controller.ped_Hori_Interrupt: Missing option -inpad.
+Don't map input port Turn_Controller.ped_Vert_Interrupt: Missing option -inpad.
+Mapping port Turn_Controller.pedestrian_Hori_Street using BUFX2.
+Mapping port Turn_Controller.pedestrian_Vert_Street using BUFX2.
+Don't map input port Turn_Controller.police_Interrupt: Missing option -inpad.
+Don't map input port Turn_Controller.read_Write: Missing option -inpad.
+Don't map input port Turn_Controller.street: Missing option -inpad.
+Mapping port Turn_Controller.traffic_Street using BUFX2.
+Don't map input port Turn_Controller.traffic_Street_0: Missing option -inpad.
+Don't map input port Turn_Controller.traffic_Street_1: Missing option -inpad.
+Mapping port Turn_Controller.west_East using BUFX2.
+
+10. Executing OPT pass (performing simple optimizations).
+
+10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \Turn_Controller..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \Turn_Controller.
+Performed a total of 0 changes.
+
+10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\Turn_Controller'.
+Removed a total of 0 cells.
+
+10.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \Turn_Controller..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module Turn_Controller.
+
+10.9. Finished OPT passes. (There is nothing left to do.)
+
+11. Executing BLIF backend.
+
+12. Printing statistics.
+
+=== Turn_Controller ===
+
+   Number of wires:               4804
+   Number of wire bits:           5633
+   Number of public wires:        4804
+   Number of public wire bits:    5633
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               5611
+     AND2X2                         55
+     AOI21X1                       627
+     AOI22X1                        33
+     BUFX2                          10
+     DFFPOSX1                     1057
+     INVX1                         534
+     MUX2X1                        411
+     NAND2X1                       363
+     NAND3X1                        82
+     NOR2X1                        739
+     NOR3X1                         14
+     OAI21X1                      1571
+     OAI22X1                        94
+     OR2X2                           7
+     XNOR2X1                         9
+     XOR2X1                          5
+
+End of script. Logfile hash: 81f4a3a506
+CPU: user 2.66s system 0.01s, MEM: 36.74 MB total, 29.71 MB resident
+Yosys 0.9 (git sha1 1979e0b)
+Time spent: 20% 23x opt_clean (0 sec), 14% 22x opt_merge (0 sec), ...
+Running getpowerground to determine power and ground net names.
+getpowerground.tcl  /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef
+Cleaning up output syntax
+ypostproc.tcl Turn_Controller_mapped.blif Turn_Controller /usr/local/share/qflow/tech/osu018/osu018.sh vdd gnd 
+Cleaning up blif file syntax
+Running blifFanout (iterative)
+Each iteration calls:
+blifFanout -l 100 -c 20 -I Turn_Controller_nofanout -s nullstring -p /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib -b BUFX2,CLKBUF1 -i A,A -o Y,Y tmp.blif Turn_Controller.blif
+
+blifFanout for qflow 1.3.17
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib Read:  Processed 6142 lines.
+Top internal fanout is 315 (load 5167.81) from node _2334_,
+driven by INVX1 with strength 58.615 (fF driven at latency 100)
+Top fanout load-to-strength ratio is 88.1654 (latency = 8816.54 ps)
+Top input node fanout is 1057 (load 29515.1) from node clock.
+Warning 1: load of 150.156 is 1.18774 times greater than strongest gate DFFPOSX1
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 6: load of 152.075 is 1.20293 times greater than strongest gate DFFPOSX1
+Warning 9: load of 155.86 is 1.23286 times greater than strongest gate DFFPOSX1
+Warning 105: load of 2393.03 is 5.24634 times greater than strongest gate INVX8
+Warning 140: load of 980.084 is 16.7825 times greater than strongest gate NAND2X1
+Warning 147: load of 1211.47 is 20.7446 times greater than strongest gate NAND2X1
+Warning 159: load of 1226.53 is 21.0026 times greater than strongest gate NAND2X1
+1508 gates exceed specified minimum load.
+552 buffers were added.
+73 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 5539    	Out: 5466    	-73
+	"2" gates	In: 72    	Out: 100    	+28
+
+Number of gates changed: 625
+gates resized: 625
+blifFanout for qflow 1.3.17
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib Read:  Processed 6142 lines.
+Top internal fanout is 46 (load 596.603) from node _2334_,
+driven by INVX8 with strength 456.133 (fF driven at latency 100)
+Top fanout load-to-strength ratio is 4.89644 (latency = 489.644 ps)
+Top input node fanout is 103 (load 3851.3) from node clock.
+Warning 1: load of 299.071 is 1.32927 times greater than strongest gate BUFX4
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 13: load of 606.603 is 2.61901 times greater than strongest gate CLKBUF1
+Warning 415: load of 280.601 is 4.80488 times greater than strongest gate NAND2X1
+Warning 442: load of 283.544 is 4.92105 times greater than strongest gate NAND3X1
+Warning 448: load of 294.935 is 5.06829 times greater than strongest gate NOR2X1
+1792 gates exceed specified minimum load.
+30 buffers were added.
+452 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 5569    	Out: 5569    	+0
+	"2" gates	In: 549    	Out: 98    	-451
+	"4" gates	In: 13    	Out: 463    	+450
+	"8" gates	In: 32    	Out: 33    	+1
+
+Number of gates changed: 482
+gates resized: 482
+blifFanout for qflow 1.3.17
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib Read:  Processed 6142 lines.
+Top internal fanout is 16 (load 596.603) from node _1392_,
+driven by NOR2X1 with strength 58.1923 (fF driven at latency 100)
+Top fanout load-to-strength ratio is 4.89644 (latency = 489.644 ps)
+Top input node fanout is 12 (load 232.841) from node traffic_Street_0[0].
+Warning 1: load of 502.052 is 2.23146 times greater than strongest gate BUFX4
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 44: load of 606.603 is 2.61901 times greater than strongest gate CLKBUF1
+Warning 670: load of 280.601 is 4.80488 times greater than strongest gate NAND2X1
+Warning 697: load of 283.544 is 4.92105 times greater than strongest gate NAND3X1
+Warning 703: load of 294.935 is 5.06829 times greater than strongest gate NOR2X1
+2046 gates exceed specified minimum load.
+0 buffers were added.
+30 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 5569    	Out: 5569    	+0
+	"2" gates	In: 128    	Out: 98    	-30
+	"4" gates	In: 463    	Out: 493    	+30
+	"8" gates	In: 33    	Out: 33    	+0
+
+Number of gates changed: 30
+gates resized: 30
+blifFanout for qflow 1.3.17
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Lib Read:  Processed 6142 lines.
+Top internal fanout is 16 (load 603.867) from node _1392_,
+driven by NOR2X1 with strength 58.1923 (fF driven at latency 100)
+Top fanout load-to-strength ratio is 4.89644 (latency = 489.644 ps)
+Top input node fanout is 12 (load 232.841) from node traffic_Street_0[0].
+Warning 1: load of 613.867 is 2.72844 times greater than strongest gate BUFX4
+This warning will only be repeated for larger overload ratios.  Warning count reflects
+the total number of overloaded nets.
+Warning 689: load of 280.601 is 4.80488 times greater than strongest gate NAND2X1
+Warning 716: load of 283.544 is 4.92105 times greater than strongest gate NAND3X1
+Warning 722: load of 294.935 is 5.06829 times greater than strongest gate NOR2X1
+2065 gates exceed specified minimum load.
+0 buffers were added.
+0 gates were changed.
+
+Gate counts by drive strength:
+
+	"1" gates	In: 5569    	Out: 5569    	+0
+	"2" gates	In: 98    	Out: 98    	+0
+	"4" gates	In: 493    	Out: 493    	+0
+	"8" gates	In: 33    	Out: 33    	+0
+
+Number of gates changed: 0
+gates resized: 0
+
+Generating RTL verilog and SPICE netlist file in directory
+	 /home/subham/software/vsdflow/TrafficLightController/synthesis
+Files:
+   Verilog: /home/subham/software/vsdflow/TrafficLightController/synthesis/Turn_Controller.rtl.v
+   Verilog: /home/subham/software/vsdflow/TrafficLightController/synthesis/Turn_Controller.rtlnopwr.v
+   Verilog: /home/subham/software/vsdflow/TrafficLightController/synthesis/Turn_Controller.rtlbb.v
+   Spice:   /home/subham/software/vsdflow/TrafficLightController/synthesis/Turn_Controller.spc
+
+Running blif2Verilog.
+Running blif2BSpice.
+Running spi2xspice.py
+spi2xspice.py "/usr/local/share/qflow/tech/osu018/osu018_stdcells.lib" -io_time=1n -time=100p -idelay=10p -odelay=100p -cload=500f Turn_Controller.spc Turn_Controller.xspice
+
+Synthesis script ended on Friday 04 December 2020 10:27:37 PM IST

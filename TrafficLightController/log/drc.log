@@ -1,0 +1,34 @@
+Qflow DRC logfile created on Friday 04 December 2020 10:41:34 PM IST
+magic -dnull -noconsole  /home/subham/software/vsdflow/TrafficLightController/layout/run_drc_Turn_Controller.tcl
+
+Magic 8.3 revision 50 - Compiled on Tuesday 13 October 2020 06:35:26 PM IST.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.10(p): scaleFactor=10, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Loading "/home/subham/software/vsdflow/TrafficLightController/layout/run_drc_Turn_Controller.tcl" from command line.
+Reading LEF data from file /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read: Processed 2941 lines.
+Turn_Controller: 10000 rects
+Turn_Controller: 20000 rects
+Turn_Controller: 30000 rects
+Turn_Controller: 40000 rects
+Turn_Controller: 50000 rects
+Turn_Controller: 60000 rects
+Turn_Controller: 70000 rects
+Turn_Controller: 80000 rects
+Turn_Controller: 90000 rects
+Turn_Controller: 100000 rects
+Processing timestamp mismatches: FILL, BUFX2, OAI21X1, CLKBUF1, DFFPOSX1, INVX2, INVX1, BUFX4, MUX2X1, AOI21X1, NOR2X1, XNOR2X1, NAND2X1, NOR3X1, NAND3X1, AND2X2, OR2X2, AOI22X1, INVX8, INVX4, OAI22X1, XOR2X1.
+drc = 0
+DRC checking script ended on Friday 04 December 2020 10:41:38 PM IST
